@@ -1,4 +1,4 @@
-const tareas = [];
+let tareas = [];
 
 
 const form = document.querySelector("form");
@@ -18,3 +18,11 @@ inputText.value="";
 console.log(tareas);
 
 });
+
+const renderTareas = ()=>{
+    tareas = JSON.parse(localStorage.getItem("tareas")) || [];
+    const table = document.querySelector("table");
+    table.innerHTML= "";
+    
+}
+
